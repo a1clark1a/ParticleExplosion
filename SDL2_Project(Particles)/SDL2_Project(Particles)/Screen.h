@@ -16,12 +16,15 @@ namespace ParticleExplosion
 		void Close();
 		void SetPixel(const int x, const int y, const Uint8 red, const Uint8 green, const Uint8 blue);
 		void Update();
+		void BoxBlur();
+
 	
 
 	private:
 		SDL_Window * m_window;
 		SDL_Renderer * m_renderer;
 		SDL_Texture * m_texture;
-		Uint32 * m_buffer;
+		Uint32 * m_buffer1;
+		Uint32 * m_buffer2;
 	};
 }
